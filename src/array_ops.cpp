@@ -17,7 +17,7 @@ void array_delete(int*& arr) {
     arr = nullptr;
 }
 
-int* array_resize(int* arr, std::size_t size, std::size_t new_size) {
+int* array_resize(int* arr, std::size_t size, std::size_t new_size) { // по-хорошему здесь бы & size
     if (arr == nullptr) {
         return nullptr;
     }
@@ -107,7 +107,7 @@ void array_quick_sort(int* arr, int low, int high) {
     array_quick_sort(arr, l, high);
 }
 
-int array_kth_smallest(int* arr, std::size_t size, std::size_t k) {
+int array_kth_smallest(int* arr, std::size_t size, std::size_t k) { //можно ли optional int?
     if (arr == nullptr) {
         std::cout << "Array is null!\n";
         return -1;
