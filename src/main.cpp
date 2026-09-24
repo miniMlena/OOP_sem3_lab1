@@ -21,16 +21,17 @@ int main() {
     int* array = nullptr;
     std::size_t size = 0;
     int choice = -1;
+
+    std::cout << "\nChoose operation:\n";
+    std::cout << "1. Create array\n";
+    std::cout << "2. Print array\n";
+    std::cout << "3. Resize array\n";
+    std::cout << "4. Insert value to array\n";
+    std::cout << "5. Remove element from array\n";
+    std::cout << "6. Find k-th minimal element in array\n";
+    std::cout << "0. Exit\n";
     
     while (true) {
-        std::cout << "\nChoose operation:\n";
-        std::cout << "1. Create array\n";
-        std::cout << "2. Print array\n";
-        std::cout << "3. Resize array\n";
-        std::cout << "4. Insert value to array\n";
-        std::cout << "5. Remove element from array\n";
-        std::cout << "6. Find k-th minimal element in array\n";
-        std::cout << "0. Exit\n";
         std::cout << "Your choice: ";
         
         if (!read_int(choice)) {
@@ -161,7 +162,7 @@ int main() {
                     break;
                 }
                 int res = array_kth_smallest(array, size, k);
-                std::cout << "k-th smallest element is " << res << ".\n";
+                std::cout << k << "-th smallest element is " << res << ".\n";
                 break;
             }
             case 0: {
