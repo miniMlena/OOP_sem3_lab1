@@ -67,6 +67,8 @@ TEST(ArrayResizeTest, ResizeFromZero) {
 TEST(ArrayInsertTest, InsertInMiddle) {
     std::size_t s = 5;
     int* a = array_create(s);
+    a[0] = 1; a[1] = 2; a[2] = 3; a[3] = 4; a[4] = 5;
+    
     a = array_insert(a, s, 3, 10);
     EXPECT_EQ(s, 6);
     EXPECT_EQ(a[0], 1);
